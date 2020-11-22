@@ -13,7 +13,8 @@ public class GreetingsController {
 
     @PostMapping("/")
     public ResponseEntity<String> greetings (@RequestBody @Valid GreetingsRequest request) {
-        String formattedGreetings =  String.format("Is a valid name!! So hello %s", request.getName());
+        String formattedGreetings =  String.format("Is a valid name!! So hello %s %s",
+                request.getFistName(), request.getLastName());
         return ResponseEntity.ok(formattedGreetings);
 
 
