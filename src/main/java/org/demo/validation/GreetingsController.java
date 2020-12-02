@@ -11,10 +11,10 @@ import javax.validation.Valid;
 @RequestMapping("/greetings")
 public class GreetingsController {
 
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<String> greetings (@RequestBody @Valid GreetingsRequest request) {
         String formattedGreetings =  String.format("Is a valid name!! So hello %s %s",
-                request.getFistName(), request.getLastName());
+                request.getFirstName(), request.getLastName());
         return ResponseEntity.ok(formattedGreetings);
 
 

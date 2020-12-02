@@ -6,28 +6,28 @@ import org.hibernate.validator.constraints.Length;
 public class GreetingsRequest {
 
     @NotContains(
-            notAllowValues = {"Juanito","Maria"},
-            message = "The first name is not allowed. values not allowed are {notAllowValues}"
+            notAllowValues = {"Michael","Bill"},
+            message = "The first name is not allowed. Following values are not allowed {notAllowValues}"
     )
-    private String fistName;
+    private String firstName;
 
     @NotContains(
-            notAllowValues = {"Bernardo","Juana"},
-            message = "The last name is not allowed. values not allowed are {notAllowValues}"
+            notAllowValues = {"Jackson","Gates"},
+            message = "The last name is not allowed. Following values are not allowed {notAllowValues}"
     )
     @Length(
             min = 1,
             max = 10,
-            message = "The lasted must have a length between {min} and {max}"
+            message = "The last name must have a length between {min} and {max}"
     )
     private String lastName;
 
-    public String getFistName() {
-        return fistName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFistName(String fistName) {
-        this.fistName = fistName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
