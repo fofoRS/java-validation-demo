@@ -7,13 +7,13 @@ public class GreetingsRequest {
 
     @NotContains(
             notAllowValues = {"Michael","Bill"},
-            message = "The first name is not allowed. Following values are not allowed {notAllowValues}"
+            message = "The first name is invalid. Following values are not allowed {notAllowValues}"
     )
     private String firstName;
 
     @NotContains(
             notAllowValues = {"Jackson","Gates"},
-            message = "The last name is not allowed. Following values are not allowed {notAllowValues}"
+            message = "The last name is invalid. Following values are not allowed {notAllowValues}"
     )
     @Length(
             min = 1,
